@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: git://sukickr/azure-cd
+
+- script: |
+    echo "Building container.."
+    docker build -t registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:CI-ckkhdsejj9757761pidmyr5dxr8 .
+    docker login registry.gcp0001.us-east4.astronomer.io -u _ -p b5d1b775834335d9d2e8a9ef9a74f4db
+    docker push registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:CI-ckkhdsejj9757761pidmyr5dxr8
