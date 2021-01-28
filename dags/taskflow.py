@@ -1,4 +1,3 @@
-python
 # taskflow.py
 
 from airflow.decorators import dag, task
