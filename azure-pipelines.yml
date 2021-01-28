@@ -10,8 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: git://sukickr/azure-cd
-
 - script: |
     echo "Building container.."
     docker build -t registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:CI-ckkhdsejj9757761pidmyr5dxr8 .
