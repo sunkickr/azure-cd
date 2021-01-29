@@ -10,7 +10,6 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-- group: AzureCI
 - group: AzureCI2
 steps:
 - script: |
