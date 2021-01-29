@@ -16,5 +16,5 @@ steps:
 - script: |
     echo "Building container.."
     docker build -t registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:$CI_PIPELINE_IID .
-    docker login registry.gcp0001.us-east4.astronomer.io -u _ -p b5d1b775834335d9d2e8a9ef9a74f4db
+    docker login registry.gcp0001.us-east4.astronomer.io -u _ -p $SERVICE-ACCOUNT-KEY
     docker push registry.gcp0001.us-east4.astronomer.io/extraterrestrial-aperature-9667/airflow:$CI_PIPELINE_IID
