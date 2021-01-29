@@ -3,10 +3,8 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 variables:
-- name: AzureCI
-  value: SERVICE-ACCOUNT-KEY
-- name: AzureCI2
-  value: CI_PIPELINE_IID
+- group: AzureCI
+- group: AzureCI2
 
 trigger:
 - main
