@@ -11,6 +11,7 @@ pool:
 
 variables:
 - group: AzureCI2
+- group: AzureCI
 steps:
 - script: |
     echo "Building container.."
